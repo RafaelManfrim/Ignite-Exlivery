@@ -1,7 +1,7 @@
 defmodule Exlivery.Factory do
   use ExMachina
 
-  alias Exlivery.Orders.Item
+  alias Exlivery.Orders.{Item, Order}
   alias Exlivery.Users.User
 
   def user_factory do
@@ -20,6 +20,18 @@ defmodule Exlivery.Factory do
       category: :pizza,
       unity_price: Decimal.new("24.50"),
       quantity: 2
+    }
+  end
+
+  def order_factory do
+    %Order{
+      delivery_address: "Rua Carvalho Leme",
+      items: [
+        build(:item),
+        build(:item, description: "Pizza de 4 Queijos")
+      ],
+      total_price: Decimal.new("98.00"),
+      user_cpf: "12345"
     }
   end
 end
