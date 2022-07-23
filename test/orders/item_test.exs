@@ -1,7 +1,7 @@
 defmodule Exlivery.Users.ItemTest do
   use ExUnit.Case
-  alias Exlivery.Orders.Item
   import Exlivery.Factory
+  alias Exlivery.Orders.Item
 
   describe "build/4" do
     test "when all params are valid, returns an item" do

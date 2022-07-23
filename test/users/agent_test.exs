@@ -1,7 +1,7 @@
 defmodule Exlivery.Users.AgentTest do
   use ExUnit.Case
-  alias Exlivery.Users.Agent, as: UserAgent
   import Exlivery.Factory
+  alias Exlivery.Users.Agent, as: UserAgent
 
   describe "save/1" do
     test "saves the user" do
