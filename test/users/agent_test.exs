@@ -24,15 +24,7 @@ defmodule Exlivery.Users.AgentTest do
 
       response = UserAgent.get("12345")
 
-      expected_response =
-        {:ok,
-         %User{
-           address: "Rua Carvalho Leme",
-           age: 18,
-           cpf: "12345",
-           email: "rafael@gmail.com",
-           name: "Rafael"
-         }}
+      expected_response = {:ok, user}
 
       assert response == expected_response
     end
